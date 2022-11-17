@@ -12,8 +12,9 @@ int num2 = Convert.ToInt32(Console.ReadLine());
 
 bool Multiplicity(int number1, int number2)
 {
-    if(number1 % number2 == 0) return true;
+    if(number1 % number2 == 0) return true; //(number1 % number2 == 0) если делится без остатка
     return false;
 }
+
 bool  result = Multiplicity(num1, num2);
 Console.WriteLine(result ? "Кратно" : $"Некратно, остаток = {num1 % num2}");

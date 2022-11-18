@@ -3,16 +3,18 @@
 // возможных координат точек в этой четверти (x и y).
 
 
-Console.WriteLine("Введите номер четверти");
-int num1 = Convert.ToInt32(Console.ReadLine());
+Console.Write("Укажите номер четверти: ");
+string quarter = Console.ReadLine();
 
-string Quarter (int num)
+string Range(string quarter1)
 {
-    if(num == 1) return "x > 0 и y > 0";
-    if(num == 2) return "x < 0 и y > 0";
-    if(num == 3) return "x < 0 и y < 0";
-    if(num == 4) return "x > 0 и y < 0";
-    return "Ввели не то число!";
+    if (quarter1 == "1") return "x > 0 и y > 0";
+    if (quarter1 == "2") return "x < 0 и y > 0";
+    if (quarter1 == "3") return "x < 0 и y < 0";
+    if (quarter1 == "4") return "x > 0 и y < 0";
+    return "Введеные неверные данные";
 }
-        
-Console.WriteLine(Quarter(num1));
+
+string range = Range(quarter);
+
+Console.WriteLine(range);

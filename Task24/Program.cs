@@ -20,5 +20,9 @@ int SumDigits(int num)
     return sum;
 }
 
-int sumDigits = SumDigits(number);
-Console.WriteLine($"Сумма чисел от 1 до {number} = {sumDigits}");
+if (number > 0)
+{
+    int sumDigits = SumDigits(number);
+    Console.WriteLine($"Сумма чисел от 1 до {number} = {sumDigits}");
+}
+else Console.WriteLine("Введено отрицательное число");

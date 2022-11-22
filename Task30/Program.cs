@@ -3,11 +3,36 @@
 // нулями и единицами в случайном порядке.
 // [1,0,1,1,0,1,0,0]
 
-int n = 8;
-int[] arr = new int[n];
-Random rand = new Random();
-for (int i = 0; i < arr.Length; i++)
+// int n = 8;
+// int[] arr = new int[n];
+// Random rand = new Random();
+// for (int i = 0; i < arr.Length; i++)
+// {
+//     arr[i] = rand.Next(0,2);
+// }
+// Console.WriteLine(string.Join(", ", arr));
+
+
+int[] array = new int[8];
+
+void RandomArray(int[] array)
 {
-    arr[i] = rand.Next(0,2);
+    Random rnd = new Random();
+    for (int i = 0; i < array.Length; i++)
+    {
+        array[i] = rnd.Next(0, 2);
+    }
 }
-Console.WriteLine(string.Join(", ", arr));
+
+void PrintArray(int[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write($"{array[i]} ");
+    }
+}
+
+RandomArray(array);
+
+// Console.WriteLine(string.Join(" ", array));
+PrintArray(array);

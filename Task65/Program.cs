@@ -10,13 +10,13 @@ void NumbersMTon(int numb1, int numb2)
 {
     if (numb1 > numb2)
     {
-        Console.Write($"{numb2} ");
         NumbersMTon(numb1 , numb2 + 1);
+        Console.Write($"{numb2} ");
     }
     if (numb1 < numb2)
     {
-        NumbersMTon(numb1 + 1 , numb2);
         Console.Write($"{numb1} ");
+        NumbersMTon(numb1 + 1 , numb2);
     }
     if (numb1 == numb2)
     Console.Write($"{numb1} ");
